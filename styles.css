@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+#logo {
+  background: #fff;
+  color: #fff;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  flex: 1 1 calc(33.333% - 20px); /* 3 columns layout with space */
+  box-sizing: border-box;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .product {
+    flex: 1 1 calc(50% - 20px); /* 2 columns layout */
+  }
+}
+
+@media (max-width: 768px) {
+  header img {
+    max-width: 80px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .product {
+    flex: 1 1 calc(100% - 20px); /* 1 column layout */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.5em 0;
+  }
+
+  footer {
+    padding: 0.5em 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
+
+/* Flexbox container for products */
+#catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
